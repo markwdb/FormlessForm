@@ -1,4 +1,4 @@
-<?php
+<?php ini_set("display_errors", true);
 
 require_once("class/email.class.php");
 //require_once("class/sqlQuery.class.php");
@@ -26,7 +26,21 @@ class ContactUsForm {
 	var $request_uri;
 	var $ip_address;
 	
-	
+	function ContactUsAjax() {
+		$this->contact_us = new ContactUs();
+		
+		$this->subject_line = "Enquiry from {$this->client_name} Website";
+		$this->from_name = $this->client_name;
+		//$this->ip_address  = $this->GetIP();
+		$this->request_uri = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+		
+		$this->contact_us->fromData($_GET);
+		
+		$email = $this;
+		//$this->sendEmail();
+		return $email;
+		
+	}
 	function ContactUsForm() {
 		
 		$this->contact_us = new ContactUs();
@@ -46,6 +60,7 @@ class ContactUsForm {
 
 			// Validation, error checking
 			if ($valid == true) {
+				$this->captcha_error_message = "OK!";
 				$this->submitted = true;
 			} else {
 				$this->error_message = $this->captcha_error_message;
@@ -53,7 +68,10 @@ class ContactUsForm {
 		}
 
 		if ($this->submitted) {
-			$this->sendEmail();
+//			$this->sendEmail();
+
+			print_r($this);
+			die();
 			//$this->toDb();
 		}
 	}

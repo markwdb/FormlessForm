@@ -1,9 +1,12 @@
 <?php
-class SPlanAjax extends Ajax{
+class formlessAjax extends Ajax{
 	
 	function sendForm($name,$email,$comments){
-		$results=ContactUsForm::ContactUsForm($name,$email,$comments);
-		return json_encode($results);
+		$email = ContactUsForm::ContactUsAjax($name,$email,$comments);
+		print_r($email);
+		ContactUsForm::generateMessage($email);		
+		//ContactUsForm::sendEmail($email);
+	//	return json_encode($results);
 	}
 
 }

@@ -5,7 +5,7 @@ require_once("class/contactUsForm.class.php");
 require_once("class/formlessAjax.class.php");
 
 $action = $_GET['action'];
-$ajax = new SPlanAjax();
+$ajax = new FormlessAjax();
 switch ($action) {
     case "sendForm":
     	$name=$_GET['name'];
