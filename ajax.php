@@ -1,17 +1,23 @@
 <?php
 ini_set('display_errors',true);
-
-require_once("class/contactUsForm.class.php");
 require_once("class/formlessAjax.class.php");
 
 $action = $_GET['action'];
-$ajax = new FormlessAjax();
 switch ($action) {
     case "sendForm":
+		$message="";
+
     	$name=$_GET['name'];
-    	$email=(int)$_GET['email'];
-    	$comments=(int)$_GET['comments'];
-        echo $ajax->sendForm($name,$email,$comments);     
-        break;
+    	$email=$_GET['email'];
+    	$comments=$_GET['comments'];
+
+		$message .=$comments;
+		$subject_line="Test";
+		$file_message=$message;
+		$headers="From: ".$name." <".$email.">";
+
   
+		mail ("markw@digitalbridge.com.au",$subject_line,$file_message,$headers);
+
+        break;  
 }
