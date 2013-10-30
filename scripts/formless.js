@@ -6,7 +6,7 @@ $(document).ready(function(){
     	results_target=$(this).attr('id')+"_results";
     	list_target=$(this).attr('name');
     	if (name_search.length>2){
-    		$.getJSON("ajax.php?action=nameSearch&name_search="+name_search+"&id_client="+id_client, function(results){
+    		$.getJSON("ajax.php?action=sendForm&name="+name+"&email="+email+"&comments="+comments, function(results){
 				$('#'+results_target+' li').remove();
 	    		$('#'+results_target).show();
 	   		 	var ul=$('#'+results_target);        	

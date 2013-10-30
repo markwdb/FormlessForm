@@ -15,7 +15,7 @@ class ContactUsForm {
 	var $from_email		 = "noreply@digitalbridge.com.au";
 	var $from_name		  = "";
 	//var $recipient_email	= "contactforms@digitalbridge.com.au";
-	var $recipient_email	= "markw@digitalbridge.com.au";
+	var $recipient_email	= "mark@markwoodward.com.au";
 	var $redirect		   = "#";
 	
 	// Constant error messages
@@ -132,11 +132,8 @@ class ContactUsForm {
 
 class ContactUs {
 
-	var $first_name;
-	var $last_name;
-	var $email_address;
-	var $website;
-	var $phone;
+	var $name;
+	var $email;
 	var $comments;
 
 
