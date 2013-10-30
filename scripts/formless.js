@@ -1,5 +1,22 @@
 $(document).ready(function(){
 
+    $('.name_search').keyup(function() {
+    	name_search = $(this).val();
+    	id_client=$('#id_client').val();
+    	results_target=$(this).attr('id')+"_results";
+    	list_target=$(this).attr('name');
+    	if (name_search.length>2){
+    		$.getJSON("ajax.php?action=nameSearch&name_search="+name_search+"&id_client="+id_client, function(results){
+				$('#'+results_target+' li').remove();
+	    		$('#'+results_target).show();
+	   		 	var ul=$('#'+results_target);        	
+		   		$.each(results, function(i,user){
+		   			ul.append("<li ><a href='"+list_target+"' id='"+user.id_user+"' class='user'>"+user.given_name+" "+user.surname+"</a></li>");
+		   		});
+	        });     
+    	}
+    });
+
 	$('.numeric').keypress(function(event) {
 		var controlKeys = [8, 9, 13, 35, 36, 37, 39, 48];
 		var isControlKey = controlKeys.join(",").match(new RegExp(event.which));
