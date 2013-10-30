@@ -65,7 +65,7 @@ class ContactUsForm {
 			return;
 		$email = new Email($this->subject_line, $message, $this->from_email, $this->from_name);
 		//$email->addRecipient($this->contact_us->email_address);
-        $email->addRecipient("contactforms@digitalbridge.com.au");	
+        //$email->addRecipient("contactforms@digitalbridge.com.au");	
 		$email->addRecipient($this->recipient_email);
 		$result = $email->send();
 	}
