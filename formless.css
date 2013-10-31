@@ -1,0 +1,13 @@
+#contact .field {
+	border: 1px dotted #ccc;
+	background: #fff;
+	display: block;
+}
+#contact .field[contenteditable=true] {
+	border: 1px solid #ccc;
+	background: #cecece;
+}
+#contact .field:focus {
+	border: 1px solid #ccc;
+	background: #cec3c1;
+}
