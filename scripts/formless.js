@@ -16,6 +16,17 @@ $(document).ready(function(){
 	        });     
     	}
     });
+    $('#submit').live('click', function() {
+		alert('submitted');
+
+	    name = $('#name').html();
+	    email = $('#email').val();
+	    comments = $('#comments').val();
+	    
+	    $.getJSON("ajax.php?action=sendForm&name="+name+"&email="+email+"&comments="+comments, function(results){
+		    
+	    });
+    });
 
 	$('.numeric').keypress(function(event) {
 		var controlKeys = [8, 9, 13, 35, 36, 37, 39, 48];
