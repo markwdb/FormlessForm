@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Formless Form</title>
+		<title>Formless Contact</title>
 		<link rel="stylesheet" type="text/css" href="formless.css" />
 		<script type="text/javascript" src="scripts/jquery.js"></script>
 		<script type="text/javascript" src="scripts/formless.js"></script>
