@@ -2,18 +2,24 @@
 <html>
 	<head>
 		<title>Formless Form</title>
+		<meta name="description" content=""/>
+		<meta name="keywords" content=""/>
 		<link rel="stylesheet" type="text/css" href="formless.css" />
 		<script type="text/javascript" src="scripts/jquery.js"></script>
 		<script type="text/javascript" src="scripts/formless.js"></script>
 	</head>
 	<body>
 		<header>
-			<h1>Formless</h1>
+			<div class="row">
+				<div class="twelvecol">
+					<h1>Formless</h1>
+				</div>
+			</div>
 		</header>
 		<section id="pagebody" class="main">		
 			<section class="form" id="contact">
 				<div class="message"></div>
-				<p class="label name">Contact Name*</p>
+				<p class="label name">Name*</p>
 				<p id="name" class="field"></p>
 				
 				<p class="label email">Email*</p>
@@ -24,6 +30,11 @@
 	
 				<a href="#" class="button" id="submit">Submit</a>
 			</section>
+
 		</section>
+
+
+		<footer>
+		</footer>
 	</body>
 </html>

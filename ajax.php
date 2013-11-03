@@ -7,6 +7,7 @@
 	$message="";
 	
 	$message .=strip_tags($comments);
+	//$message .=$comments;
 
 	$subject_line="Test";
 	$file_message=$message;
@@ -22,8 +23,15 @@
 		$errorcount = $errorcount+1;
 		$error .="Email is Required \n";
 	}
+/*
+	if ($comments=="") {
+		$errorcount = $errorcount+1;
+		$error .="Comments are Required \n";
+	}
+*/
 	if ($errorcount > 0) {
 		echo json_encode(nl2br($error));
+		
 	} else {
 		mail ("markw@digitalbridge.com.au",$subject_line,$file_message,$headers);
 	}		

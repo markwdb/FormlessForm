@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	
+
 	$('#contact .field').attr("tabindex",0);
 	
 	$('#contact .field').focus(function(){
@@ -28,13 +29,17 @@ $(document).ready(function(){
 		    cache: false,
 		    success: function(data){
 			    if ((data).length) {
+		    		$('.message').removeClass('error').removeClass('success').empty();
 		    		$('.message').addClass('error').append(JSON.parse(data));
 			    } else {
-				    alert('Success!');				    
+		    		$('.message').removeClass('error').removeClass('success').empty();
+		    		$('.message').addClass('success').append('Submitted!');
+		    		$('.field').empty();
 			    }
 		    }
 		
 	    });
+
 	    return false;
     });
 
