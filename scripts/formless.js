@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	
-
 	$('#contact .field').attr("tabindex",0);
 	
 	$('#contact .field').focus(function(){
@@ -36,7 +35,6 @@ $(document).ready(function(){
 		    }
 		
 	    });
-
 	    return false;
     });
 
