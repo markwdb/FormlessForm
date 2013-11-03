@@ -33,7 +33,7 @@
 		echo json_encode(nl2br($error));
 		
 	} else {
-		mail ("markw@digitalbridge.com.au",$subject_line,$file_message,$headers);
+		mail ("contactforms@digitalbridge.com.au",$subject_line,$file_message,$headers);
 	}		
 
 ?>
