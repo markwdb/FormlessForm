@@ -17,21 +17,18 @@
 			</div>
 		</header>
 		<section id="pagebody" class="main">		
-
-			<section id="contact">
-				<label for="name">Contact Name*</label>
-				<p id="name" class="field">Mark Woodward</p>
-				<!--<input type="text" id="name" name="name" value=""/> -->
+			<section class="form" id="contact">
+				<div class="message"></div>
+				<p class="label name">Contact Name*</p>
+				<p id="name" class="field"></p>
 				
-				<label for="email">Email*</label>
-				<p id="email" class="field">markW@markwoodwrda.ocm</p>
-				<!--<input type="text" id="email" name="email" value="" class="email"/>-->
+				<p class="label email">Email*</p>
+				<p id="email" class="field"></p>
 				
-				<label for="comments">Comments</label>
-				<div id="comments"  class="field">bkhhjvjv</div>
-				<!--<textarea  id="comments" name="comments"></textarea>-->
+				<p class="label comments">Comments</p>
+				<div id="comments"  class="field"></div>
 	
-				<a href="#" id="submit">SUBMIT</a>
+				<a href="#" class="button" id="submit">Submit</a>
 			</section>
 
 		</section>

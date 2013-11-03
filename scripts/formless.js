@@ -9,7 +9,11 @@ $(document).ready(function(){
 	$('#contact .field').blur(function(){
 		$(this).removeAttr("contenteditable");
 	});
-	
+	$('#contact p.field').keypress(function(event) {
+	    if (event.keyCode == 13) {
+	        event.preventDefault();
+	    }
+	});
 	
     $('#submit').live('click', function() {
 	    name = $('#name').html();
@@ -17,16 +21,18 @@ $(document).ready(function(){
 	    comments = $('#comments').html();
 	    
 	    dataString = "name="+name+"&email="+email+"&comments="+comments;
-	    
-	    $.getJSON("ajax.php?action=sendForm&name="+name+"&email="+email+"&comments="+comments);
-	    
+	    	    
 	  	$.ajax({
 		    type: "POST",
 		    url: "ajax.php",
 		    data: dataString,
 		    cache: false,
 		    success: function(data){
-			    alert(data);
+			    if ((data).length) {
+		    		$('.message').addClass('error').append(JSON.parse(data));
+			    } else {
+				    alert('Success!');				    
+			    }
 		    }
 		
 	    });
