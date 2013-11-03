@@ -8,7 +8,7 @@
 	
 	$message .=strip_tags($comments);
 
-	$subject_line="Test";
+	$subject_line="Formless Contact Test";
 	$file_message=$message;
 	$headers="From: ".$name." <".$email.">";
 
