@@ -1,0 +1,112 @@
+/* DB Generic Reset */
+@import url(http://www.digitalbridge.com.au/central/reset.css);
+@import url(http://fonts.googleapis.com/css?family=Damion);
+@import url(http://fonts.googleapis.com/css?family=Archivo+Narrow);
+
+.form .field {
+	border: 1px dotted #ccc;
+	background: #fff;
+	display: block;
+	padding: 5px 0.5em;
+	min-height: 1em;
+	max-height: 1em;
+	line-height: 1em;
+	white-space: nowrap;
+	width: 20em;
+	overflow:hidden;
+	font-family: monospace;
+}
+.form div.field {
+	min-height: 10em;
+	padding: 0.5em;
+	resize: both;	
+}
+.form .field[contenteditable=true] {
+	border: 1px solid #ccc;
+	background: #efefef;
+}
+.form .field:focus {
+	border: 1px solid #ccc;
+	background: #efefef;
+}
+.form a.button {
+ 	display: inline-block; 
+	border: 1px solid #ccc;
+	text-decoration: none;	
+	width: auto;
+	padding: 5px 1em;
+	color: #000;
+	background: #ccc;
+	margin: 10px 0;
+}
+body {
+	background: #222;
+	font-family: Archivo Narrow, sans-serif;
+}
+header {
+	display: block;
+	width: 21em;
+	margin: 2em auto 10px;
+	background: -webkit-linear-gradient(#0067ff 0%, #182954 100%);
+	color: #fff;
+	padding: 0.5em 2em;
+	border-radius: 1em 1em 0 0;
+	box-shadow: 1px 1px 10px #111;
+	border: 1px solid #182954;
+}
+h1 {
+	font-family: Damion;
+	font-size: 48pt;
+	text-shadow: 1px 1px 1px #182954;
+
+}
+.form {
+	background: #eee;
+	width: 21em;
+	margin: 0 auto;
+	padding:  1em 2em;
+	border: 1px solid #fff;
+	box-shadow: 1px 1px 10px #000;
+}
+.form .field,
+.form .label {
+	margin: 10px auto;
+}
+.form .label {
+	width: 18em; 
+	color: #666;
+	font-size: 11pt;
+}
+#contact a.button {
+	background: -webkit-linear-gradient(#0067ff 0%, #182954 100%);
+	border: 1px solid #182954;
+	font-family: Damion;
+	color: #fff;
+	border-radius: 10px;
+	font-size: 14pt;
+	margin: 1em auto;
+	display: block;
+	text-align: center;
+	width: 12em;
+}
+.message {
+	display: none;
+	text-align: center;
+	font-size: 10pt;
+	padding: 0.5em 1em;
+}
+.message.error {
+	display: block;	
+	background-color: #ffbaba;
+	color: #ff0000;
+	border-top: 1px dotted #ff0000;
+	border-bottom: 1px dotted #ff0000;
+}
+.message.success {
+	display: block;	
+	display: block;	
+	background-color: #b1f7aa;
+	color: #33cc00;
+	border-top: 1px dotted #33cc00;
+	border-bottom: 1px dotted #33cc00;
+}
